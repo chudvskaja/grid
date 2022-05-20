@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body, html {
+        max-width: 1140px;
+        margin: 0 auto;
+        font-family: 'Open Sans';
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .display {
+        margin-top: 3vw;
+        font-family: 'Big Shoulders Text';
+        font-size: 20vw;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Big Shoulders Text';
+        font-size: 4.8vw;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 0;  
+    }
+
+    p {
+    margin: 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    #container-top {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .brand {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Big Shoulders Text';
+        font-size: 5.8vw;
+        color: #fff;
+        font-weight: 800;
+    }
+
+    .navigation {
+        background-color: #ff0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.8vw;
+        font-weight: 600;
+    }
+
+    .container-article {
+        margin-top: 6vw;
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        background-color:#ff0;
+        padding-top: 28px;
+        padding-bottom: 36px;    
+    }
+
+ .article-thumb {
+        margin-top: 16px;
+        margin-left: 2vw;
+    }
+
+    .article {
+        margin-top: 12px;
+        margin-left: 5vw;
+        margin-right: 1vw;
+    } 
+
+    .container-collage {
+        margin-top: 7vw;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+    }
+
+    .item1 {
+        grid-area: 1 / 2 / 5 / 7;
+    }
+
+    .item2 {
+        grid-area: 2 / 7 / 6 / 12;
+    }
+
+    .item3 {
+        grid-area: 4 / 3 / 8 / 8;
+    }
+
+    .item4 {
+        grid-area: 5 / 6 / 9 / 11;
+    }
+
+    #container-footer {
+        margin-top: 8vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .colophon {
+        background-color: #ff0;
+        color: #000;
+        padding: 0 0 30px 30px;
+    }
+
+    .to-top {
+        background-color: #000;
+        font-family: 'Big Shoulders Text';
+        font-size: 5vw;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+
+    }
+
+    @media only screen and (max-width: 760px)  {
+        #container-top {
+           grid-template-columns: 100%;
+        }
+
+        .brand {
+            font-size: 9vw;
+            height: 10vw;
+
+        }
+
+        .navigation {
+            font-size: 5.6vw;
+            height: 10vw;
+        }
+
+        .container-article {
+            grid-template-columns: 3fr 9fr;
+            font-size: 0.9rem;
+        }
+
+        .container-collage {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "a b"
+            "c d";
+        }
+
+        .item1 {grid-area: a;}
+        .item2 {grid-area: b;}
+        .item3 {grid-area: c;}
+        .item4 {grid-area: d;}
+
+
+        .to-top {
+            font-size: 64px;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        #container-footer {
+            margin-top: 10vw;
+            grid-template-columns: 100%;
+        }
+
+        .colophon {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    }
+
+    @media only screen and (min-width: 1140px)  {
+        #container-top {
+            height: 80px;
+        }
+
+        .brand {
+            font-size: 64px;
+        }
+
+        .navigation {
+            font-size: 32px;
+        }
+    }
+
+
+
+</style>
+</head>
+<body>
+    <nav id="container-top">
+        <div class="brand">STREET ART GALLERY</div>
+        <div class="navigation">
+            <a href="gallery-wall.html">Gallery.Wall</a>
+        </div>
+    </nav>
+    <img src="./cover-banksy-street-art-gallery.jpg" alt="a boy">
+    <p class="display">The 4 Best!</p>
+    <h1>4 Best Street Artists On 4 Continents 2022</h1>
+
+    <div class="container-article">
+        <div><img class="article-thumb" src="./gallery-banksy-street-art-gallery.jpg" alt="a boy"></div>
+        <div class="article">
+            <h2>Banksy / Europe?</h2>
+            <p>Banksy displays his art on publicly visible surfaces such as walls and self-built physical prop pieces. Banksy no longer sells photographs or reproductions of his street graffiti, but his public ‘installations’ are regularly resold, often even by removing the wall they were painted on. A small number of Banksy’s works are officially sold through Pest Control.</p>
+        </div>
+        <div><img class="article-thumb" src="./gallery-gonzalo-street-art-gallery.jpg" alt="graffiti"></div>
+            <div class="article">
+                <h2>Gonzalo Matz Salinas / South America</h2>
+            <p>He paints women because they are a source of inspiration. Through their faces they tell him about his daily life, explains Gonzalo Matiz Salinas from Chile, perched on his ladder, brush in his right hand. In the other, he holds his mobile phone. He reproduces with precision the model that he realized in his workshop, located opposite.
+            </p>
+        </div>
+        <div><img class="article-thumb" src="./gallery-daleast-street-art-gallery.jpg" alt="a beast"></div>
+            <div class="article">
+                <h2>DALeast / Asia</h2>
+                <p>Highly prolific painter and sculptor DALeast from China is one of the most prominent street art figures of his country and, arguably, one of the biggest names on the international urban and graffiti art scene. His dark yet mesmerizing, highly intricate paintings can be found in urban landscapes of cities around the globe.</p>
+            </div> 
+        <div><img class="article-thumb" src="./gallery-falko-street-art-gallery.jpg" alt="an elefant"> </div>
+            <div class="article">
+                <h2>Falko / Africa</h2>
+                <p>Falko got his start in the world of street art in Cape Town in the late 1980s. He was just 16 at the time. Though most now associate him with his elephant artwork, it took him many more years to make a name for himself. For much of his early career he was bogged down by commercial work and was unable to find time to paint what truly inspired him.
+                </p>
+            </div>
+        </div>
+        <div class="container-collage">
+            <img class="item1" src="./gallery-banksy-street-art-gallery.jpg" alt="a boy">
+            <img class="item2" src="./gallery-gonzalo-street-art-gallery.jpg" alt="graffitti">
+            <img class="item3" src="./gallery-daleast-street-art-gallery.jpg" alt="a beast">
+            <img class="item4" src="./gallery-falko-street-art-gallery.jpg" alt="en elefant">
+        </div>
+    
+    <footer id="container-footer">
+<div class="colophon">
+<h3>On this page you'll find street art by:</h3>
+© Banksy / Europe <br>
+© Gonzalo Matz Salinas / South America <br>
+© DALeast / Asia <br>
+© Falko / Africa <br>
+<h3><a href="gallery-wall.html">Watch the Gallery.Wall</a></h3>
+<div>
+    <a href="https://twitter.com/explore" target="_blank">
+        <i class="fa fa-twitter" style="font-size: 40px; color:black;"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank">
+        <i class="fa fa-instagram" style="font-size: 36px; color:black;"></i>
+    </a></div> <br>
+
+    <div>Web Developer: Kseniia Biriukova</div>
+    <div>2022 © All Rights reserved</div>
+</div>
+<div class="to-top">STREET ART GALLERY <br>
+    <a href="#top"><i class="fa fa-arrow-circle-up" style="font-size:60px; color: white;"></i> </a>
+</div>
+    </footer> 
+</body>
+</html>
